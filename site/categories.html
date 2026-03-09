@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Categories - BestAI.dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #0a0a0f; --surface: #13131a; --surface-elevated: #1a1a24; --border: #2a2a3a; --text: #e4e4e7; --text-muted: #a1a1aa; --accent: #22d3ee; --accent-hover: #06b6d4; --success: #34d399; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 16px 0; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 20px; font-weight: 700; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .logo span { color: var(--accent); }
+        nav { display: flex; gap: 32px; }
+        nav a { color: var(--text-muted); text-decoration: none; font-weight: 500; }
+        nav a:hover { color: var(--accent); }
+        .breadcrumb { padding: 24px 0; color: var(--text-muted); }
+        .breadcrumb a { color: var(--accent); text-decoration: none; }
+        .page-title { font-size: 36px; font-weight: 700; margin-bottom: 32px; }
+        .category-section { margin-bottom: 48px; }
+        .category-title { font-size: 24px; font-weight: 600; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+        .category-icon { font-size: 28px; }
+        .tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .tool-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; transition: all 0.3s; text-decoration: none; color: inherit; display: block; }
+        .tool-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+        .tool-header { display: flex; justify-content: space-between; margin-bottom: 12px; }
+        .tool-name { font-size: 18px; font-weight: 600; }
+        .tool-rating { color: var(--warning); font-size: 14px; }
+        .tool-description { color: var(--text-muted); font-size: 14px; }
+        footer { background: var(--surface); border-top: 1px solid var(--border); padding: 32px 0; margin-top: 64px; }
+        .footer-text { color: var(--text-muted); font-size: 14px; }
+        .code { font-family: 'JetBrains Mono', monospace; background: var(--surface-elevated); padding: 2px 6px; border-radius: 4px; }
+        @media (max-width: 768px) { .tools-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo"><span class="code">&lt;/&gt;</span> BestAI.dev</a>
+            <nav><a href="index.html#tools">Tools</a><a href="index.html#categories">Categories</a></nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a> → Categories</div>
+        <h1 class="page-title">Browse by Category</h1>
+        
+        <div class="category-section" id="editors">
+            <h2 class="category-title"><span class="category-icon">📝</span> AI Code Editors</h2>
+            <div class="tools-grid">
+                <a href="tools/cursor.html" class="tool-card">
+                    <div class="tool-header"><span class="tool-name">Cursor</span><span class="tool-rating">★★★★★</span></div>
+                    <p class="tool-description">AI-first code editor built on VS Code</p>
+                </a>
+                <a href="tools/windsurf.html" class="tool-card">
+                    <div class="tool-header"><span class="tool-name">Windsurf</span><span class="tool-rating">★★★★☆</span></div>
+                    <p class="tool-description">From the makers of Codeium</p>
+                </a>
+            </div>
+        </div>
+        
+        <div class="category-section" id="autocomplete">
+            <h2 class="category-title"><span class="category-icon">✨</span> Autocomplete</h2>
+            <div class="tools-grid">
+                <a href="tools/tabnine.html" class="tool-card">
+                    <div class="tool-header"><span class="tool-name">Tabnine</span><span class="tool-rating">★★★★☆</span></div>
+                    <p class="tool-description">The veterans of AI code completion</p>
+                </a>
+                <a href="tools/github-copilot.html" class="tool-card">
+                    <div class="tool-header"><span class="tool-name">GitHub Copilot</span><span class="tool-rating">★★★★☆</span></div>
+                    <p class="tool-description">The original AI pair programmer</p>
+                </a>
+            </div>
+        </div>
+        
+        <div class="category-section" id="analysis">
+            <h2 class="category-title"><span class="category-icon">🧠</span> Code Analysis</h2>
+            <div class="tools-grid">
+                <a href="tools/claude-code.html" class="tool-card">
+                    <div class="tool-header"><span class="tool-name">Claude Code</span><span class="tool-rating">★★★★★</span></div>
+                    <p class="tool-description">Anthropic's developer-focused AI</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer><div class="container"><div class="footer-text">© 2026 BestAI.dev. We may earn commissions from affiliate links.</div></div></footer>
+</body>
+</html>
